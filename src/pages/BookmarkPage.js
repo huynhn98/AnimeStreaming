@@ -15,7 +15,7 @@ const BookmarkPage = () => {
         const response = await axios.get('/api/anime/')
         const data = response.data
         
-        setResults(data)
+        setResults(Array.from(data))
         
     } catch (error) {
       console.log(error.response)
@@ -32,6 +32,7 @@ const BookmarkPage = () => {
     
    
   }
+
 
   const content = results.map((anime, i) => {
     return (
