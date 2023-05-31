@@ -4,6 +4,7 @@ import { Button, Row } from 'react-bootstrap'
 import AnimeCard from '../components/AnimeCard'
 import axios from 'axios'
 import BookmarkCard from '../components/BookmarkCard'
+axios.defaults.withCredentials = true;
 const BookmarkPage = () => {
 
   const [results, setResults] = useState([])
@@ -11,7 +12,7 @@ const BookmarkPage = () => {
   
 
   const getData = async () => {
-    axios.defaults.withCredentials = true;
+    
     try {
         const response = await axios.get('https://anime-api-w6k0.onrender.com/api/anime/')
         const data = response.data
