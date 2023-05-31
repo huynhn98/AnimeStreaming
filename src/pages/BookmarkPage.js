@@ -34,6 +34,7 @@ const BookmarkPage = () => {
   }
 
 
+  console.log(results)
   const content = results.map((anime, i) => {
     return (
       <div>
