@@ -12,7 +12,7 @@ import BookmarkPage from './pages/BookmarkPage'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<Header/>}>
+    <Route path='/*' element={<Header/>}>
       <Route index element={<Home/>}/>
       <Route path='/content' element={<Content />} />
       <Route path='/result' element={<DescriptionPage/>} />
