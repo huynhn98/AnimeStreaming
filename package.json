@@ -1,5 +1,5 @@
 {
-  "proxy": "https://anime-api.onrender.com",
+  "proxy": "https://anime-api-w6k0.onrender.com",
   "name": "anime",
   "version": "0.1.0",
   "private": true,
