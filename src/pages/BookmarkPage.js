@@ -26,11 +26,11 @@ const BookmarkPage = () => {
 
   useEffect(() => {
       getData();
-  }, [results]);
+  }, []);
 
   const handleclick = async (e) => {
     const res = await axios.delete(`/api/anime/${results[e.target.value]._id}`)
-    
+    getData()
     
    
   }
