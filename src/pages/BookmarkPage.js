@@ -14,7 +14,7 @@ const BookmarkPage = () => {
   const getData = async () => {
     
     try {
-        const response = await axios.get('https://anime-api-w6k0.onrender.com/api/anime/')
+        const response = await axios.get('/api/anime/')
         const data = response.data
         console.log("response ", response)
         setResults(data)
