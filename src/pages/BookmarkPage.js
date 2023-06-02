@@ -4,7 +4,6 @@ import { Button, Row } from 'react-bootstrap'
 import AnimeCard from '../components/AnimeCard'
 import axios from 'axios'
 import BookmarkCard from '../components/BookmarkCard'
-axios.defaults.withCredentials = true;
 const BookmarkPage = () => {
 
   const [results, setResults] = useState([])
