@@ -25,11 +25,11 @@ const BookmarkPage = () => {
 
   useEffect(() => {
       getData();
-  }, [results]);
+  }, []);
 
   const handleclick = async (e) => {
     const res = await axios.delete(`https://anime-api-w6k0.onrender.com/api/anime/${results[e.target.value]._id}`)
-    
+    getData()
     
    
   }
