@@ -167,6 +167,9 @@ img {
   .react-multi-carousel-list {
     margin: 0 3rem;
   }
+  .card-img-top {
+    height: 65vw;
+  }
  }
 
 @media (max-width: 767.98px) {  }
