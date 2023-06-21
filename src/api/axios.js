@@ -47,6 +47,10 @@ export const getSeasonalAnime = async (pageParam=1, perPage= 5, season="SPRING",
     return response.data
 }
 
-
+export const getEpisode = async(id, options={}) => {
+    const response = await axios.get(`https://api.consumet.org/anime/gogoanime/watch/${id}`)
+    console.log(response, "getEpisode") 
+    return response.data.sources
+}
 
 

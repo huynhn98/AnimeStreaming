@@ -2,16 +2,16 @@ import React from 'react'
 import { Card, Row, Col, Container } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
 import { getServers } from '../api/axios'
+import { useNavigate } from 'react-router-dom'
 
 
 const EpisodeCard = React.forwardRef(({id, src, episode}, ref) => {
 
   const [anime, setAnime] = useState([])
 
+  const navigate = useNavigate()
   const handleClick = () => {
-    console.log(anime[0])
-    var win = window.open(anime[0].url, '_blank');
-    win.focus();
+    navigate('/watch', {state: {id: id}})
   }
 
   const getData = async () => {
