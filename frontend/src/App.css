@@ -144,7 +144,8 @@ li {
 }
 
 .header {
-  margin: 7rem 0rem 0rem 14rem;
+  margin: 1rem 0 0 1rem;
+
 }
 
 .react-multi-carousel-list {
@@ -163,7 +164,12 @@ img {
 
 
 @media (max-width: 575.98px) { 
-  
+  .react-multi-carousel-list {
+    margin: 0 3rem;
+  }
+  .card-img-top {
+    height: 65vw;
+  }
  }
 
 @media (max-width: 767.98px) {  }

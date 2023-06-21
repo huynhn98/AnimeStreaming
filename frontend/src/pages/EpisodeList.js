@@ -29,6 +29,7 @@ const AnimePage = () => {
   }, []);
 
 
+  anime.reverse()
   const content = anime.map((a, i) => {
     return (
         

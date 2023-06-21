@@ -11,10 +11,11 @@ const BookmarkPage = () => {
   
 
   const getData = async () => {
+    
     try {
-        const response = await axios.get('/api/anime/')
+        const response = await axios.get('https://anime-api-w6k0.onrender.com/api/anime/')
         const data = response.data
-        
+        console.log("response ", response)
         setResults(data)
         
     } catch (error) {
@@ -24,15 +25,17 @@ const BookmarkPage = () => {
 
   useEffect(() => {
       getData();
-  }, [results]);
+  }, []);
 
   const handleclick = async (e) => {
-    const res = await axios.delete(`/api/anime/${results[e.target.value]._id}`)
-    
+    const res = await axios.delete(`https://anime-api-w6k0.onrender.com/api/anime/${results[e.target.value]._id}`)
+    getData()
     
    
   }
 
+
+  console.log(results)
   const content = results.map((anime, i) => {
     return (
       <div>
