@@ -7,7 +7,7 @@ import BookmarkCard from '../components/BookmarkCard'
 const BookmarkPage = () => {
 
   const [results, setResults] = useState([])
-
+  const [deleted, setDeleted] = useState(0)
   
 
   const getData = async () => {
@@ -25,11 +25,11 @@ const BookmarkPage = () => {
 
   useEffect(() => {
       getData();
-  }, [results]);
+  }, [deleted]);
 
   const handleclick = async (e) => {
     const res = await axios.delete(`https://anime-api-w6k0.onrender.com/api/anime/${results[e.target.value]._id}`)
-    setResults( prev => prev.items.filter(item => item != res) )
+    setDeleted(1)
     
    
   }
