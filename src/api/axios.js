@@ -61,9 +61,9 @@ export const getRandomTrendingAnimeId = async (pageParam=1, options={}) => {
     return response.data.results[randomIndex].id
 }
 
-export const getTrailer = async (provider= "gogoanime", options={}) => {
+export const getTrailer = async (options={}) => {
     const id = await getRandomTrendingAnimeId()
-    const response = await axios.get(`https://api.consumet.org/meta/anilist/info/${id}`, {params: {provider: provider}})
+    const response = await axios.get(`https://api.consumet.org/meta/anilist/info/${id}`)
     console.log(response.data.trailer.id, "get trailer id")
     return response.data.trailer.id
 }

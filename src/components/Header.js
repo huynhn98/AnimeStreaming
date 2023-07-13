@@ -30,7 +30,7 @@ const Header = () => {
 
     return (
       <>
-      <Navbar bg="dark" expand="lg" sticky="top" variant="dark">
+      <Navbar className='navbar' bg="dark" expand="lg" sticky="top" variant="dark">
       <Container fluid>
         <Navbar.Brand ></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />

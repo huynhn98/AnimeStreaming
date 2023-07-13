@@ -54,8 +54,7 @@ const content =
   return (
     <React.Fragment>
     <div className='header'>
-        <h2>Spring 2023 Anime</h2>
-        <h3>Watch the Lastest Anime of This Season!</h3>
+        <h3>Trending Anime</h3>
     </div>
     <Carousel  fade swipeable={false}
                 partialVisible={true}

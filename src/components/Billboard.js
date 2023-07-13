@@ -22,7 +22,23 @@ const Billboard = ({id}) => {
     
     content =
     <div className='billboard'>
-    <ReactPlayer className='video' playing={true} controls={false} url={`https://www.youtube-nocookie.com/embed/${anime}`} volume={0} height={"56.25vw"} width={"100%"} muted={true} loop={true}/>
+    <ReactPlayer 
+    className='video' 
+    playing={true} 
+    controls={false} 
+    url={`https://www.youtube-nocookie.com/embed/${anime}`} 
+    volume={0} 
+    height={"56.25vw"} 
+    width={"100%"} 
+    muted={true} 
+    loop={true}
+    config={{
+      youtube: {
+        playerVars: { showinfo: 0 }
+      },
+    }}
+    
+    />
 </div>
   return (
     <>{content}</>

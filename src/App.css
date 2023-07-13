@@ -78,7 +78,7 @@ li {
 }
 .card-img-top {
   width: 100%;
-    height: 16vw;
+    height: 12vw;
     object-fit:cover;
 }
 
@@ -191,7 +191,14 @@ img {
 
 .video {
   width: 100%;
-  height: 56.25vw;
+  aspect-ratio: auto;
   object-fit: cover;
   filter: brightness(60%);
+  
+}
+
+.navbar {
+  z-index: 40;
+  width: 100%;
+  
 }
