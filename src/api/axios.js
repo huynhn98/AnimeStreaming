@@ -53,4 +53,18 @@ export const getEpisode = async(id, options={}) => {
     return response.data.sources
 }
 
+export const getRandomTrendingAnimeId = async (pageParam=1, options={}) => {
+
+    const response = await axios.get("https://api.consumet.org/meta/anilist/trending", {params: { page:pageParam }})
+    const randomIndex = Math.floor(Math.random() * response.data.results.length)
+    console.log(response.data.results[randomIndex].id, "get random trending anime")
+    return response.data.results[randomIndex].id
+}
+
+export const getTrailer = async (provider= "gogoanime", options={}) => {
+    const id = await getRandomTrendingAnimeId()
+    const response = await axios.get(`https://api.consumet.org/meta/anilist/info/${id}`, {params: {provider: provider}})
+    console.log(response.data.trailer.id, "get trailer id")
+    return response.data.trailer.id
+}
 

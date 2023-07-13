@@ -183,3 +183,15 @@ img {
  }
 
 @media (max-width: 1399.98px) {  }
+
+.billboard {
+  position: relative;
+  height: 56.25vw;
+}
+
+.video {
+  width: 100%;
+  height: 56.25vw;
+  object-fit: cover;
+  filter: brightness(60%);
+}
