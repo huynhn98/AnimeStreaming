@@ -14,17 +14,23 @@ const AnimeCard = React.forwardRef(({id, src, title}, ref) => {
 
   const card = (
     <>
-      <Card.Img variant="top" src={src} />
+      <Card.Img className="" style={{height: 19 + "vw"}} variant="top" src={src} />
     </>
   )
   const content = ref
     ? 
-    <Card ref={ref} className="align-items-center mx-3 my-4 mw-100" onClick={()=>{handleClick()}}>{card}
+    <Card ref={ref} className="card align-items-center mx-3 my-4" style={{height: 367 + "px"}} onClick={()=>{handleClick()}}>{card}
+      
     </Card>
-      : <Card className="align-items-center mx-3 my-4"  onClick={()=>{handleClick()}}>{card}</Card>
+      : <Card className="card align-items-center mx-3 my-4 " style={{height: 367 + "px"}} onClick={()=>{handleClick()}}>{card}</Card>
       
   return (
-    content
+    <>
+    <div >
+    {content}
+    <p className='d-flex justify-content-center'>{title}</p>
+    </div>
+    </>
   );
 })
 

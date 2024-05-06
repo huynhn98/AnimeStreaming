@@ -28,7 +28,7 @@ const BookmarkPage = () => {
   }, [deleted]);
 
   const handleclick = async (e) => {
-    const res = await axios.delete(`https://anime-api-w6k0.onrender.com/api/anime/${results[e.target.value]._id}`)
+    const res = await axios.delete(`http://localhost:3000/api/anime/${results[e.target.value]._id}`)
     setDeleted(!deleted)
     
    

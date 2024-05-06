@@ -13,7 +13,7 @@ const Bookmark = ({titles, id, image}) => {
     const lastEpisode = "last episode watch"
     const finished = false
     const anime = {title, id, image, lastEpisode, finished}
-    const res = await axios.post('https://anime-api-w6k0.onrender.com/api/anime' , anime)
+    const res = await axios.post('http://localhost:3000/api/anime' , anime)
     
     
 

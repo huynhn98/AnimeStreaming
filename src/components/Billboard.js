@@ -26,7 +26,7 @@ const Billboard = ({id}) => {
     className='video' 
     playing={true} 
     controls={false} 
-    url={`https://www.youtube-nocookie.com/embed/${anime}`} 
+    url={`https://www.youtube-nocookie.com/embed/${anime}?modestbranding=1`} 
     volume={0} 
     height={"56.25vw"} 
     width={"100%"} 
@@ -41,7 +41,10 @@ const Billboard = ({id}) => {
     />
 </div>
   return (
-    <>{content}</>
+    <>
+    <div>{content}</div>
+    
+    </>
     
   )
 }
