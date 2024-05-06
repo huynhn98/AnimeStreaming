@@ -23,12 +23,19 @@ const router = createBrowserRouter(
   )
 )
 
+const meta = {
+  name: 'viewport',
+  content: 'width=device-width, initial-scale=1',
+}
+
 function App() {
 
   document.body.style.backgroundColor = "black";
   return(
     <div>
       <RouterProvider router={router} />
+      
+      <DocumentMeta {...meta}> </DocumentMeta>
     </div>
   )
 }
